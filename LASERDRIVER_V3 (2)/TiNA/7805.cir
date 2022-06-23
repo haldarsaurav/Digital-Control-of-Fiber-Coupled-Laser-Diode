@@ -1,0 +1,121 @@
+.subckt 7805 In Aj Out
+F1 In 0 Vc 1
+Rcon In 0 1e6
+B1 4 Aj V= Table (V(In,Aj), 0,0, 1,0, 7,5, 35,5, 36,0)
+Vc 4 Out 0
+F2 In Aj Vc 4m
+.ends
+*78L05 MCE 7-12-95
+*78L05 circuit taken from Signetics 1977 Analog Data Book page 160
+*5V 100mA Voltage Regulator pkg:TO-92 1,2,3
+.SUBCKT 78L05 1 2 3
+Q1 5 5 1 QPNP
+Q2 10 5 1 QPNP
+Q3 1 11 12 QNPN
+Q4 1 10 11 QNPN
+Q5 10 13 14 QNPN
+Q6 1 4 20 QNPN
+Q7 10 19 21 QNPN
+Q8 9 9 2 QNPN
+Q9 18 9 22 QNPN OFF
+Q10 8 18 2 QNPN
+Q11 5 7 17 QNPN
+Q12 5 16 17 QNPN
+Q13 10 15 17 QNPN
+C1 15 10 20E-12
+D1 2 4 DZ5V
+Q14 2 8 7 QPNP
+R17 2 17 4E3
+R16 4 1 20E3
+R15 16 20 4E3
+R14 19 16 700
+R13 2 19 300
+R12 2 21 100
+R11 9 7 1E3
+R10 18 7 10E3
+R9 7 3 2.2E3
+R8 2 22 1E3
+R7 8 7 2E3
+R6 2 15 1.4E3
+R5 15 3 4.5E3
+R4 3 14 100
+R3 3 12 2
+R2 13 11 500
+R1 13 12 200
+
+.MODEL QPNP PNP(IS=1.05E-15 BF=220 VAF=240 IKF=0.1 ISE=1.003E-9
++ NE=4 ISC=1.003E-9 NC=4 RB=3 RE=0.5 RC=0.2 CJE=5.7E-12 VJE=0.75 TF=3.35E-10
++ CJC=4.32E-12 VJC=0.75 TR=1.7E-7 VJS=0.75 KF=4E-15 )
+
+.MODEL QNPN NPN(IS=8.11E-14 BF=205 VAF=113 IKF=0.5 ISE=1.06E-11
++ NE=2 BR=4 VAR=24 IKR=0.225 RB=1.37 RE=0.343 RC=0.137 CJE=2.95E-11
++ TF=3.97E-10 CJC=1.52E-11 TR=8.5E-8 XTB=1.5 )
+
+.MODEL DZ5V D(IS=1E-11 RS=7.708 N=1.27 TT=5E-8 CJO=4.068E-10 VJ=0.75
++ M=0.33 BV=4.946 IBV=0.01 )
+.ENDS 78L05
+* LM7805 model.
+* No need to use .inc - I've set the .asy symbol to remove the need for .inc.
+* (I used the symbol of LT1084, just replaced the LT1084 by LMxxxx and LTC.LIB by regulators.lib)
+
+.SUBCKT LM7805  1    2    3
+* In GND Out
+QT6          23  10  2   Q_NPN 0.1
+QT7          5   4   10  Q_NPN 0.1
+QT5          7   6   5   Q_NPN 0.1
+QT1          1   9   8   Q_NPN 0.1
+QT3          11  8   7   Q_NPN 0.1
+QT2          11  13  12  Q_NPN 0.1
+QT17         1   15  14  Q_NPN 10
+C2           10  23      4P
+R16          12  5       500
+R12          16  2       12.1K
+QT18         17  23  16  Q_NPN 0.1
+D1           18  19  	 D_D
+R11          20  21      850
+R5           22  3       100
+QT14         24  18  2   Q_NPN 0.1
+R21          6   2       2.67K
+R20          3   6       640
+DZ2          25  26      D_5V1
+R19          1   26      16K
+R18          14  3       250M
+R17          25  14      380
+R15          25  15      1.62K
+QT16         1   20  15  Q_NPN 1
+QT15         2   24  21  Q_PNP 0.1
+*OFF
+R14          21  24      4K
+C1           27  24      20P
+R13          19  2       4K
+QT13         24  27  18  Q_NPN 0.1
+QT12         20  25  22  Q_NPN 1
+*OFF
+QT11         20  28  2   Q_NPN 0.1
+*OFF
+QT10         20  11  1   Q_PNP 0.1
+R10          17  27      16.5K
+R9           5   4       1.9K
+R8           4   23      26
+R7           10  2       1.2K
+R6           29  2       1K
+QT9          11  11  1   Q_PNP 0.1
+QT8          27  16  29  Q_NPN 0.1
+QT4          15  6   17  Q_NPN 0.1
+DZ1          2   9       D_5V6
+R4           1   9       80K
+R3           28  2       830
+R2           13  28      4.97K
+R1           8   13      7K
+*
+.MODEL D_5V1 D( IS=10F N=1.16 BV=5.1 IBV=0.5M CJ0 = 1P TT = 10p )
+.MODEL D_5V6 D( IS=10F N=1.16 BV=5.6 IBV=5U CJ0 = 1P TT = 10p )
+.MODEL Q_NPN NPN( IS=10F NF=1.16 NR=1.16 BF=80 CJC=1P CJE=2P
++       TF=10P TR=1N )
+.MODEL Q_PNP PNP( IS=10F NF=1.16 NR=1.16 BF=80 CJC=1P CJE=2P
++      TF=10P TR=1N )
+.MODEL D_D D( IS=1F N=1.16 CJ0 = 1P TT = 10p )
+
+.ENDS LM7805
+*
+*==================================

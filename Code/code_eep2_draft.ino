@@ -26,6 +26,8 @@ lcd.begin(16, 2);
 
 
 }
+
+
 void loop() {
  analogWrite(9,100); // Laser diode connected to pin A9
  delay(1000);

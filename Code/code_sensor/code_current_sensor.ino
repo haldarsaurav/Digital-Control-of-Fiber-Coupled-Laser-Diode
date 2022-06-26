@@ -1,10 +1,6 @@
- /*
-  DC-Current-Voltage-Sensor-Module
-  made on 06 Feb 2021
-  Home
-  
-  based on Adafruit Example
-*/
+/////////////////////////////////////
+// DC-Current-Voltage-Sensor-Module//
+/////////////////////////////////////
 
 #include <Wire.h>
 #include <Adafruit_INA219.h>

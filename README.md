@@ -1,6 +1,6 @@
 # Laser-Driver
 
-Developing a new digital circuit using a micro-controller to drive Laser replacing analog methods of curent control which is not precise. 
+Developing a new digital circuit using a micro-controller to drive Laser replacing analog methods of curent control. 
 
 <ul>
   <li>Controlling the current to a LASER thorugh digital means instead of  analog means (Variable Resistors)</li>

@@ -22,6 +22,10 @@ Additional improvent and additions
 
 ## Protoyping the existing circuit
 
+<p align="center">
+  <img width="400" height="500" src="img/1st_prototype.jpg ">
+</p>
+
 <img src="img/1st_prototype.jpg " width="100" height="100">
 
 ![box_enclosuret!](img/1st_prototype.jpg "box_enclosure")

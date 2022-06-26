@@ -24,9 +24,33 @@ Additional improvent and additions
 
 ## Prototyping the existing circuit
 
+
+Made the circuit following the schematic to drive the LASER
+
 <p align="center">
   <img width="500" height="600" src="img/1st_prototype.jpg ">
 </p>
+
+
+## Intefaced the LCD to show any required data
+
+<p align="center">
+  <img width="500" height="600" src="img/LCD_interfacing.jpg ">
+</p>
+
+## Intefaced the INA219 Current sensor to measure the curreent value
+
+<p align="center">
+  <img width="500" height="600" src="img/current_sensor_interfacing.jpg ">
+</p>
+
+The vale from the INA219 using the LCD LED as load :) (As I am doing this project Hochschule, I am quite restricted with parts)
+
+
+<p align="center">
+  <img width="500" height="600" src="img/current_sensor_data.png ">
+</p>
+
 
 
 

@@ -1,4 +1,4 @@
-# Laser-Driver
+# Digital Control of Fiber Coupled Laser Diode
 
 Developing a new digital circuit using a micro-controller to drive Laser (LED1) replacing analog methods of curent control. 
 

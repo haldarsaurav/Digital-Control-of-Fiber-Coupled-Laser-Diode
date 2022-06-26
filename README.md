@@ -20,6 +20,12 @@ Additional improvent and additions
   <li>Housing all the electronics in a approprite housing.</li>
 </ul>  
 
+## Protoyping the existing circuit
+
+![box_enclosuret!](img/1st_prototype.jpg "box_enclosure")
+
+
+
 
 
 

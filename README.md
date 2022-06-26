@@ -20,15 +20,13 @@ Additional improvent and additions
   <li>Housing all the electronics in a approprite housing.</li>
 </ul>  
 
-## Protoyping the existing circuit
+## Prototyping the existing circuit
 
 <p align="center">
-  <img width="400" height="500" src="img/1st_prototype.jpg ">
+  <img width="500" height="600" src="img/1st_prototype.jpg ">
 </p>
 
-<img src="img/1st_prototype.jpg " width="100" height="100">
 
-![box_enclosuret!](img/1st_prototype.jpg "box_enclosure")
 
 
 

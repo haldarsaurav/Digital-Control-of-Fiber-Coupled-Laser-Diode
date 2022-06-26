@@ -2,6 +2,10 @@
 
 Developing a new digital circuit using a micro-controller to drive Laser (LED1) replacing analog methods of curent control. 
 
+<p align="center">
+  <img width="500" height="600" src="schematic/schematic1.JPG ">
+</p>
+
 ![box_enclosuret!](schematic/schematic1.JPG "box_enclosure")
 
 <ul>

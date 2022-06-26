@@ -6,30 +6,24 @@
 // 
 // 17th June 2022
 //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // include the library code:
-#include <LiquidCrystal.h>
 
-// initialize the library by associating any needed LCD interface pin
-// with the arduino pin number it is connected to
+#include <LiquidCrystal.h>                                                    // initialize the library by associating any needed LCD interface pin
 
-const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;                   // with the arduino pin number it is connected to
 
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-void setup() {
+void setup() {                                                                // set up the LCD's number of columns and rows:
 
-// set up the LCD's number of columns and rows:
 lcd.begin(16, 2);
-
-
 
 }
 
-
 void loop() {
- analogWrite(9,100); // Laser diode connected to pin A9
+ analogWrite(9,100);                                                          // Laser diode connected to pin A9
  delay(1000);
  analogWrite(9,150);
  delay(1000);
@@ -40,11 +34,9 @@ void loop() {
  analogWrite(9,0);
  delay(1000);
 
-// LCD Message
-/*( Print your message here  )*/
+                                                                              // LCD Message
 lcd.print("   HELLO       ");
-lcd.setCursor(0,1);           // Set the cursor for the second line( the second 1 after comma sets the cursor at the 2 or lower line).
+lcd.setCursor(0,1);                                                           // Set the cursor for the second line( the second 1 after comma sets the cursor at the 2 or lower line).
 lcd.print("      WORLD "); 
-
 
 }

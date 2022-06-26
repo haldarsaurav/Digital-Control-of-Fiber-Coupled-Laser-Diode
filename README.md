@@ -2,6 +2,8 @@
 
 Developing a new digital circuit using a micro-controller to drive Laser replacing analog methods of curent control. 
 
+![box_enclosuret!](schematic/schematic1.JPG "box_enclosure")
+
 <ul>
   <li>Controlling the current to a LASER thorugh digital means instead of  analog means (Variable Resistors)</li>
   <li>Reading the current drawn and power of the LASER dynamicvally using INA219 Current Sensor</li>

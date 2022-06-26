@@ -93,7 +93,7 @@ Code with LCD initialsed:
   <img width="500" height="600" src="img/current_sensor_interfacing.jpg ">
 </p>
 
-The vale from the INA219 using the LCD LED as load :) (As I am doing this project Hochschule, I am quite restricted with parts)
+The vale from the INA219 using the LCD's LED as load :) (As I am doing this project Hochschule, I am quite restricted with parts)
 
 <p align="center">
   <img src="img/current_sensor_data.png ">

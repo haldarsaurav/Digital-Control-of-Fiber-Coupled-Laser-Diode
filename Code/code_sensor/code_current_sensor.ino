@@ -9,7 +9,7 @@ Adafruit_INA219 ina219;
 
 void setup(void) 
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial) {
       // will pause Zero, Leonardo, etc until serial console opens
       delay(1);

@@ -1,4 +1,4 @@
-# Laser-Driver
+# Digital Control of Fiber Coupled Laser Diode
 
 Developing a new digital circuit using a micro-controller to drive Laser (LED1) replacing analog methods of curent control. 
 
@@ -40,7 +40,7 @@ Made the circuit following the schematic to drive the LASER
 code snippet of sending increased PWM signals through A9 pin of Arduino 
 
     void loop() {
-         analogWrite(9,100);                                                          // Laser diode connected to pin A9
+         analogWrite(9,100);                                           // Laser diode connected to pin A9
          delay(1000);
          analogWrite(9,150);
          delay(1000);
@@ -62,20 +62,20 @@ Code with LCD initialsed:
 
     // include the library code:
 
-    #include <LiquidCrystal.h>                                                    // initialize the library by associating any needed LCD interface pin
+    #include <LiquidCrystal.h>                                     // initialize the library by associating any needed LCD interface pin
 
-    const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;                   // with the arduino pin number it is connected to
+    const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;    // with the arduino pin number it is connected to
 
     LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-    void setup() {                                                                // set up the LCD's number of columns and rows:
+    void setup() {                                                 // set up the LCD's number of columns and rows:
 
     lcd.begin(16, 2);
 
     }
 
     void loop() {
-     analogWrite(9,100);                                                          // Laser diode connected to pin A9
+     analogWrite(9,100);                                           // Laser diode connected to pin A9
      delay(1000);
      analogWrite(9,150);
      delay(1000);
@@ -99,7 +99,7 @@ Code with LCD initialsed:
   <img width="500" height="600" src="img/current_sensor_interfacing.jpg ">
 </p>
 
-The vale from the INA219 using the LCD LED as load :) (As I am doing this project Hochschule, I am quite restricted with parts)
+The vale from the INA219 using the LCD's LED as load :) (As I am doing this project Hochschule, I am quite restricted with parts)
 
 <p align="center">
   <img src="img/current_sensor_data.png ">

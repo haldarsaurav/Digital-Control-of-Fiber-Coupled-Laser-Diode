@@ -4,14 +4,13 @@
 
 #include <Wire.h>
 #include <Adafruit_INA219.h>
-
 Adafruit_INA219 ina219;
 
 void setup(void) 
 {
+  
   Serial.begin(9600);
   while (!Serial) {
-      // will pause Zero, Leonardo, etc until serial console opens
       delay(1);
   }
 
@@ -29,17 +28,14 @@ void setup(void)
 
 void loop(void) 
 {
-  float shuntvoltage = 0;
+
+float shuntvoltage = 0;
   float busvoltage = 0;
   float current_mA = 0;
   float loadvoltage = 0;
   float power_mW = 0;
+  
 
-  shuntvoltage = ina219.getShuntVoltage_mV();
-  busvoltage = ina219.getBusVoltage_V();
-  current_mA = ina219.getCurrent_mA();
-  power_mW = ina219.getPower_mW();
-  loadvoltage = busvoltage + (shuntvoltage / 1000);
   
   Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
   Serial.print("Shunt Voltage: "); Serial.print(shuntvoltage); Serial.println(" mV");
@@ -48,5 +44,5 @@ void loop(void)
   Serial.print("Power:         "); Serial.print(power_mW); Serial.println(" mW");
   Serial.println("");
 
-  delay(2000);
+  delay(1000);
 }

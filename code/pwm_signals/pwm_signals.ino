@@ -10,6 +10,10 @@
 
 // include the library code:
 
+
+
+
+
 #include <LiquidCrystal.h>                                                    // initialize the library by associating any needed LCD interface pin
 
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;                   // with the arduino pin number it is connected to
@@ -24,19 +28,19 @@ lcd.begin(16, 2);
 
 void loop() {
  analogWrite(9,100);                                                          // Laser diode connected to pin A9
- delay(1000);
+ delay(100);
  analogWrite(9,150);
- delay(1000);
+ delay(100);
  analogWrite(9,200);
- delay(1000);
+ delay(100);
  analogWrite(9,250);
- delay(1000);
+ delay(100);
  analogWrite(9,0);
- delay(1000);
+ delay(100);
 
                                                                               // LCD Message
 lcd.print("   HELLO       ");
 lcd.setCursor(0,1);                                                           // Set the cursor for the second line( the second 1 after comma sets the cursor at the 2 or lower line).
-lcd.print("      WORLD "); 
+lcd.print("      WORLD  "); 
 
 }

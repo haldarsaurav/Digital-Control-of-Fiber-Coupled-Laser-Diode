@@ -6,6 +6,12 @@ Developing a new digital circuit using a micro-controller to drive Laser (LED1) 
   <img src="schematic/schematic1.JPG ">
 </p>
 
+The Existing circuit we are trying to reeplicate digitally: 
+
+<p align="center">
+  <img src="schematic/schematic1.JPG ">
+</p>
+
 <ul>
   <li>Controlling the current to a LASER thorugh digital means instead of  analog means (Variable Resistors)</li>
   <li>Reading the current drawn and power of the LASER dynamicvally using INA219 Current Sensor</li>

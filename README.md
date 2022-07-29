@@ -165,7 +165,7 @@ Code for inteerfacing INA219 and measuring the current values
 Schematic for the entire plan and existing circuits which are already implemented, we can futher make the system more compact using an on-board ATMEGA328 IC.
 
 <p align="center">
-  <img width="600" height="600" src="schematic/schematic_v1.0.png ">
+  <img width="700" height="600" src="schematic/schematic_v1.0.png ">
 </p>
 
 We plan to use MCP4725 to convert the analog PWM signals from Arduino to digital values then use that to drive a current controlled Op-amp circuit in a voltage followeer mode. 
@@ -173,13 +173,13 @@ We plan to use MCP4725 to convert the analog PWM signals from Arduino to digital
 Some of my simulations :-
 
 <p align="center">
-  <img width="600" height="600" src="simulation/simulation1.jpg ">
+  <img width="700" height="600" src="simulation/simulation1.jpg ">
 </p>
 <p align="center">
-  <img width="600" height="600" src="simulation/simulation2.jpeg ">
+  <img width="700" height="600" src="simulation/simulation2.jpeg ">
 </p>
 <p align="center">
-  <img width="600" height="600" src="simulation/simulation3.jpeg ">
+  <img width="700" height="600" src="simulation/simulation3.jpeg ">
 </p>
 
 and then use a HM10 Blueetooth module to control the system oveer bluetooth remotely. 

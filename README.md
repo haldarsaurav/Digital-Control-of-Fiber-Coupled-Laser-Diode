@@ -9,7 +9,11 @@ Developing a new digital circuit using a micro-controller to drive Laser (LED1) 
 The Existing circuit we are trying to reeplicate digitally: 
 
 <p align="center">
-  <img src="schematic/schematic1.JPG ">
+  <img src="existing_circuit1.jpg ">
+</p>
+
+<p align="center">
+  <img src="existing_circuit2.jpg ">
 </p>
 
 <ul>

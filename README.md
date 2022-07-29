@@ -16,6 +16,8 @@ The Existing circuit we are trying to reeplicate digitally:
   <img src="img/existing_circuit2.jpg ">
 </p>
 
+Some of our objectives :- 
+
 <ul>
   <li>Controlling the current to a LASER thorugh digital means instead of  analog means (Variable Resistors)</li>
   <li>Reading the current drawn and power of the LASER dynamicvally using INA219 Current Sensor</li>
@@ -97,7 +99,7 @@ Code with LCD initialsed:
 
     }
 
-## Interfaced the INA219 Current sensor to measure the curreent value
+## Interfaced the INA219 Current sensor to measure the current value
 
 <p align="center">
   <img width="500" height="600" src="img/current_sensor_interfacing.jpg ">
@@ -160,7 +162,11 @@ Code for inteerfacing INA219 and measuring the current values
       delay(2000);
     }
 
+Schematic for the entire plan and existing circuits which are already implemented, we can futher make the system more compact using an on-board ATMEGA328 IC.
 
+<p align="center">
+  <img width="500" height="600" src="img/current_sensor_interfacing.jpg ">
+</p>
 
 
 
